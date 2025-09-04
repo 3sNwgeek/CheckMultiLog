@@ -1,0 +1,102 @@
+开始扫描...
+输出目录: D:\sectools\BlueTeamTools\checkMultiLog\checkmultilog日志分析-GUI_V2\reports
+发现文件: 1 个
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkMultiLogPro/simpleLog/nginx_mixed_test_logs.log  | 格式: NCSA
+已写入报告: D:\sectools\BlueTeamTools\checkMultiLog\checkmultilog日志分析-GUI_V2\reports\nginx_mixed_test_logs.log.report.html
+当前授权为：授权版（年费） ，免费版本仅支持分析IIS_W3C/NCSA_IIS格式，其他格式请授权注册
+开始扫描...
+输出目录: D:\sectools\BlueTeamTools\checkMultiLog\checkmultilog日志分析-GUI_V2\reports
+发现文件: 1 个
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkMultiLogPro/simpleLog/aws_alb_access_2025-08-26.log
+已写入报告: D:\sectools\BlueTeamTools\checkMultiLog\checkmultilog日志分析-GUI_V2\reports\aws_alb_access_2025-08-26.log.report.html
+当前授权为：授权版（年费） ，免费版本仅支持分析IIS_W3C/NCSA_IIS格式，其他格式请授权注册
+开始扫描...
+输出目录: D:\sectools\BlueTeamTools\checkMultiLog\checkmultilog日志分析-GUI_V2\reports
+发现文件: 13 个
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\access.log  | 格式: NCSA
+已跳过输出分析报告: 非免费版支持格式。该文件命中规则库内置规则0次
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\apache_access.log  | 格式: NCSA
+已跳过输出分析报告: 非免费版支持格式。该文件命中规则库内置规则42次
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\aws_alb_access_2025-08-26.log
+已跳过输出分析报告: 非免费版支持格式。该文件命中规则库内置规则5次
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\haproxy_access_2025-08-26.log
+已跳过输出分析报告: 非免费版支持格式。该文件命中规则库内置规则200次
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\iis.log  | 格式: NCSA_IIS
+已写入报告: D:\sectools\BlueTeamTools\checkMultiLog\checkmultilog日志分析-GUI_V2\reports\iis.log.report.html
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\iis_20250826.log  | 格式: IIS_W3C
+已写入报告: D:\sectools\BlueTeamTools\checkMultiLog\checkmultilog日志分析-GUI_V2\reports\iis_20250826.log.report.html
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\jetty_access_2025-08-26.log  | 格式: NCSA
+已跳过输出分析报告: 非免费版支持格式。该文件命中规则库内置规则18次
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\mixed_formats_test.log  | 格式: NCSA
+已跳过输出分析报告: 非免费版支持格式。该文件命中规则库内置规则6次
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\nginx.log
+已跳过输出分析报告: 非免费版支持格式。该文件命中规则库内置规则60次
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\nginx_mixed_test_logs.log  | 格式: NCSA
+已跳过输出分析报告: 非免费版支持格式。该文件命中规则库内置规则12次
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\nomal_access.log
+已跳过输出分析报告: 非免费版支持格式。该文件命中规则库内置规则0次
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\simpleLog.rar
+错误: 非文本或不支持的文件，已跳过
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\tomcat_access_log_2025-08-26.log  | 格式: NCSA
+已跳过输出分析报告: 非免费版支持格式。该文件命中规则库内置规则14次
+当前授权为：授权无效（已降级为免费版） ，免费版本仅支持分析IIS_W3C/NCSA_IIS格式，其他格式请授权注册
+开始扫描...
+输出目录: D:\sectools\BlueTeamTools\checkMultiLog\checkmultilog日志分析-GUI_V2\reports
+发现文件: 13 个
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\access.log  | 格式: NCSA
+已写入报告: D:\sectools\BlueTeamTools\checkMultiLog\checkmultilog日志分析-GUI_V2\reports\access.log.report.html
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\apache_access.log  | 格式: NCSA
+已写入报告: D:\sectools\BlueTeamTools\checkMultiLog\checkmultilog日志分析-GUI_V2\reports\apache_access.log.report.html
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\aws_alb_access_2025-08-26.log
+已写入报告: D:\sectools\BlueTeamTools\checkMultiLog\checkmultilog日志分析-GUI_V2\reports\aws_alb_access_2025-08-26.log.report.html
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\haproxy_access_2025-08-26.log
+已写入报告: D:\sectools\BlueTeamTools\checkMultiLog\checkmultilog日志分析-GUI_V2\reports\haproxy_access_2025-08-26.log.report.html
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\iis.log  | 格式: NCSA_IIS
+已写入报告: D:\sectools\BlueTeamTools\checkMultiLog\checkmultilog日志分析-GUI_V2\reports\iis.log.report.html
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\iis_20250826.log  | 格式: IIS_W3C
+已写入报告: D:\sectools\BlueTeamTools\checkMultiLog\checkmultilog日志分析-GUI_V2\reports\iis_20250826.log.report.html
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\jetty_access_2025-08-26.log  | 格式: NCSA
+已写入报告: D:\sectools\BlueTeamTools\checkMultiLog\checkmultilog日志分析-GUI_V2\reports\jetty_access_2025-08-26.log.report.html
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\mixed_formats_test.log  | 格式: NCSA
+已写入报告: D:\sectools\BlueTeamTools\checkMultiLog\checkmultilog日志分析-GUI_V2\reports\mixed_formats_test.log.report.html
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\nginx.log
+已写入报告: D:\sectools\BlueTeamTools\checkMultiLog\checkmultilog日志分析-GUI_V2\reports\nginx.log.report.html
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\nginx_mixed_test_logs.log  | 格式: NCSA
+已写入报告: D:\sectools\BlueTeamTools\checkMultiLog\checkmultilog日志分析-GUI_V2\reports\nginx_mixed_test_logs.log.report.html
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\nomal_access.log
+已写入报告: D:\sectools\BlueTeamTools\checkMultiLog\checkmultilog日志分析-GUI_V2\reports\nomal_access.log.report.html
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\simpleLog.rar
+错误: 非文本或不支持的文件，已跳过
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\tomcat_access_log_2025-08-26.log  | 格式: NCSA
+已写入报告: D:\sectools\BlueTeamTools\checkMultiLog\checkmultilog日志分析-GUI_V2\reports\tomcat_access_log_2025-08-26.log.report.html
+当前授权为：授权版（年费） ，免费版本仅支持分析IIS_W3C/NCSA_IIS格式，其他格式请授权注册
+开始扫描...
+输出目录: D:\sectools\BlueTeamTools\checkMultiLog\checkmultilog日志分析-GUI_V2\reports
+发现文件: 13 个
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\access.log  | 格式: NCSA
+已写入报告: D:\sectools\BlueTeamTools\checkMultiLog\checkmultilog日志分析-GUI_V2\reports\access.log.report.html
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\apache_access.log  | 格式: NCSA
+已写入报告: D:\sectools\BlueTeamTools\checkMultiLog\checkmultilog日志分析-GUI_V2\reports\apache_access.log.report.html
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\aws_alb_access_2025-08-26.log
+已写入报告: D:\sectools\BlueTeamTools\checkMultiLog\checkmultilog日志分析-GUI_V2\reports\aws_alb_access_2025-08-26.log.report.html
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\haproxy_access_2025-08-26.log
+已写入报告: D:\sectools\BlueTeamTools\checkMultiLog\checkmultilog日志分析-GUI_V2\reports\haproxy_access_2025-08-26.log.report.html
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\iis.log  | 格式: NCSA_IIS
+已写入报告: D:\sectools\BlueTeamTools\checkMultiLog\checkmultilog日志分析-GUI_V2\reports\iis.log.report.html
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\iis_20250826.log  | 格式: IIS_W3C
+已写入报告: D:\sectools\BlueTeamTools\checkMultiLog\checkmultilog日志分析-GUI_V2\reports\iis_20250826.log.report.html
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\jetty_access_2025-08-26.log  | 格式: NCSA
+已写入报告: D:\sectools\BlueTeamTools\checkMultiLog\checkmultilog日志分析-GUI_V2\reports\jetty_access_2025-08-26.log.report.html
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\mixed_formats_test.log  | 格式: NCSA
+已写入报告: D:\sectools\BlueTeamTools\checkMultiLog\checkmultilog日志分析-GUI_V2\reports\mixed_formats_test.log.report.html
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\nginx.log
+已写入报告: D:\sectools\BlueTeamTools\checkMultiLog\checkmultilog日志分析-GUI_V2\reports\nginx.log.report.html
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\nginx_mixed_test_logs.log  | 格式: NCSA
+已写入报告: D:\sectools\BlueTeamTools\checkMultiLog\checkmultilog日志分析-GUI_V2\reports\nginx_mixed_test_logs.log.report.html
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\nomal_access.log
+已写入报告: D:\sectools\BlueTeamTools\checkMultiLog\checkmultilog日志分析-GUI_V2\reports\nomal_access.log.report.html
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\simpleLog.rar
+错误: 非文本或不支持的文件，已跳过
+文件: D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\tomcat_access_log_2025-08-26.log  | 格式: NCSA
+已写入报告: D:\sectools\BlueTeamTools\checkMultiLog\checkmultilog日志分析-GUI_V2\reports\tomcat_access_log_2025-08-26.log.report.html
+当前授权为：授权版（年费） ，免费版本仅支持分析IIS_W3C/NCSA_IIS格式，其他格式请授权注册

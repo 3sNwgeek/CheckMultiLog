@@ -1,0 +1,67 @@
+<!doctype html><html><head><meta charset='utf-8'><title>checkMultiLog日志安全分析报告</title><style>
+:root{--bg:#fff;--fg:#222;--muted:#666;--card:#f6f8fa;--line:#e6e6e6;--hit:#fff8e1;}
+html[data-theme=dark]{--bg:#111;--fg:#eee;--muted:#aaa;--card:#1b1b1b;--line:#333;--hit:#222814;}
+body{font-family:Segoe UI,Arial; margin:0; background:var(--bg); color:var(--fg);}
+header{position:sticky; top:0; background:var(--card); border-bottom:1px solid var(--line); padding:10px 16px; z-index:10;}
+main{padding:16px;}
+h1{font-size:18px; margin:0 0 6px 0;}
+.meta{font-size:12px; color:var(--muted);} .bar{display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-top:8px;}
+input[type=text]{padding:6px 10px; width:360px; background:var(--bg); color:var(--fg); border:1px solid var(--line);}
+button{padding:6px 10px; border:1px solid var(--line); background:var(--bg); color:var(--fg); cursor:pointer;}
+section{margin-top:18px;} table{border-collapse:collapse; width:100%;}
+th,td{border:1px solid var(--line); padding:6px 8px; font-size:13px; vertical-align:top;} th{background:#f5f5f5; text-align:left;}
+details{border:1px solid var(--line); margin:8px 0; background:var(--card);} details>summary{padding:8px; cursor:pointer; font-weight:600; background:#f5f5f5;}
+.evt-row{background:var(--hit);} code{font-size:11px;} .muted{color:var(--muted);} a{color:inherit; text-decoration:underline;}
+.iplink{cursor:pointer; color:#2a7ae2; text-decoration:underline;} .pill{display:inline-block; padding:2px 8px; border:1px solid var(--line); border-radius:10px; margin:0 6px 0 0; font-size:12px;}
+.wh-box{display:flex; gap:8px; flex-wrap:wrap; align-items:center;}
+</style><script>
+const whitelist = {ips:new Set(), ua:[], path:[], rule:[]};
+function filterRows(){
+  const q=document.getElementById('q').value.toLowerCase();
+  const rows=[...document.querySelectorAll('.evt-row')];
+  rows.forEach(tr=>{
+    const txt=tr.innerText.toLowerCase();
+    const ip=tr.dataset.ip || ''; const ua=tr.dataset.ua || ''; const path=tr.dataset.path || ''; const rule=tr.dataset.rule || '';
+    let ok = (!q || txt.includes(q));
+    if(ok){
+      if(whitelist.ips.size && whitelist.ips.has(ip)) ok=false;
+      if(ok && whitelist.ua.length){ ok = !whitelist.ua.some(p=>new RegExp(p,'i').test(ua)); }
+      if(ok && whitelist.path.length){ ok = !whitelist.path.some(p=>new RegExp(p,'i').test(path)); }
+      if(ok && whitelist.rule.length){ ok = !whitelist.rule.some(p=>new RegExp(p,'i').test(rule)); }
+    }
+    tr.style.display = ok ? '' : 'none';
+  });
+  const ipCount=new Map(), ruleCount=new Map();
+  document.querySelectorAll('.evt-row[data-ip]').forEach(tr=>{
+    if(tr.style.display==='none') return;
+    const ip=tr.dataset.ip, rule=tr.dataset.rule;
+    ipCount.set(ip, (ipCount.get(ip)||0)+1);
+    ruleCount.set(rule, (ruleCount.get(rule)||0)+1);
+  });
+  const ipBody=document.getElementById('top_ips_body'); if(ipBody){ ipBody.innerHTML=''; let i=1; [...ipCount.entries()].sort((a,b)=>b[1]-a[1]).slice(0,80).forEach(([ip,cnt])=>{
+    const safe=ip.replace(/[^a-zA-Z0-9_.-]/g,'_'); const tr=document.createElement('tr'); tr.innerHTML=`<td>${i++}</td><td><a class="iplink" onclick="openIp('${safe}')">${ip}</a></td><td>${cnt}</td>`; ipBody.appendChild(tr);
+  });}
+  const ruleBody=document.getElementById('top_rules_body'); if(ruleBody){ ruleBody.innerHTML=''; let i=1; [...ruleCount.entries()].sort((a,b)=>b[1]-a[1]).slice(0,80).forEach(([rule,cnt])=>{
+    const tr=document.createElement('tr'); tr.innerHTML=`<td>${i++}</td><td>${rule}</td><td>${cnt}</td>`; ruleBody.appendChild(tr);
+  });}
+}
+function initTheme(){ const t=localStorage.getItem('theme')||'light'; document.documentElement.setAttribute('data-theme', t); }
+function toggleTheme(){ const cur=document.documentElement.getAttribute('data-theme'); const nxt = cur==='dark'?'light':'dark'; localStorage.setItem('theme',nxt); document.documentElement.setAttribute('data-theme',nxt); }
+function openIp(ip){
+  const id='ip_'+ip.replace(/[^a-zA-Z0-9_.-]/g,'_'); const el=document.getElementById(id);
+  if(el){ el.setAttribute('open','open'); el.scrollIntoView({behavior:'smooth', block:'start'}); }
+}
+function addWhitelist(type){
+  const el = document.getElementById('wh_'+type); const val = (el.value||'').trim(); if(!val) return;
+  if(type==='ip'){ whitelist.ips.add(val); addPill(type,val); }
+  else { whitelist[type].push(val); addPill(type,val); }
+  el.value=''; filterRows();
+}
+function addPill(type, val){
+  const box = document.getElementById('whlist_'+type);
+  const span = document.createElement('span'); span.className='pill'; span.textContent=type+': '+val+' ✕';
+  span.onclick=()=>{ if(type==='ip'){ whitelist.ips.delete(val);} else { const arr=whitelist[type]; const i=arr.indexOf(val); if(i>=0) arr.splice(i,1);} span.remove(); filterRows(); };
+  box.appendChild(span);
+}
+window.addEventListener('DOMContentLoaded', ()=>{ initTheme(); filterRows(); });
+</script></head><body><header><h1>checkMultiLog日志安全分析报告</h1><div class='meta'>Log: <b>D:/sectools/BlueTeamTools/checkMultiLog/checkmultilog日志分析-GUI_V2/simpleLog\nomal_access.log</b> | Total: <b>1556</b> | Hits: <b>0</b></div><div class='bar'><input id='q' type='text' placeholder='搜索 关键词' oninput='filterRows()'><button onclick='toggleTheme()'>Light/Dark</button><div class='wh-box'>IP白名单: <input id='wh_ip' type='text' placeholder='192.168.1.1'> <button onclick="addWhitelist('ip')">添加</button>UA白名单(正则): <input id='wh_ua' type='text' placeholder='curl|monitor'> <button onclick="addWhitelist('ua')">添加</button>路径白名单(正则): <input id='wh_path' type='text' placeholder='/health|/metrics'> <button onclick="addWhitelist('path')">添加</button>规则白名单(正则): <input id='wh_rule' type='text' placeholder='SafeScanner|Docker'> <button onclick="addWhitelist('rule')">添加</button></div><div class='wh-box'><div id='whlist_ip'></div><div id='whlist_ua'></div><div id='whlist_path'></div><div id='whlist_rule'></div></div></div></header><main><section><h2>Top Source IPs</h2><table><thead><tr><th>#</th><th>IP</th><th>Hits(过滤后)</th></tr></thead><tbody id='top_ips_body'></tbody></table></section><section><h2>Top Rules</h2><table><thead><tr><th>#</th><th>Rule</th><th>Hits(过滤后)</th></tr></thead><tbody id='top_rules_body'></tbody></table></section><section><h2>Events by IP</h2></section><p class='muted'>Generated by checkMultiLog</p></main></body></html>
