@@ -1,0 +1,11 @@
+203.0.113.10 - - [26/Aug/2025:09:20:12 +0000] "GET /?id=1 HTTP/1.1" 200 123 "-" "Mozilla/5.0"
+198.51.100.5 - - [26/Aug/2025:09:21:13 +0000] "GET /search?q=1%20or%201=1 HTTP/1.1" 200 321 "-" "curl/7.88.1"
+#Fields: date time c-ip cs-method cs-uri-stem cs-uri-query sc-status cs(User-Agent)
+2025-08-26 09:22:11 192.0.2.55 GET /index.aspx id=2 200 "Mozilla/5.0"
+2025-08-26 09:22:12 192.0.2.56 GET /login.aspx name=admin%20or%201=1 200 "Mozilla/5.0"
+Aug 26 09:23:11 hap01 haproxy[1234]: 198.51.100.77:54321 [26/Aug/2025:09:23:11.000] fe~ be/srv 0/0/0/1/2 200 100 - - ---- 0/0/0/0/0 0/0 "GET /index.php?id=3 HTTP/1.1" "-" "Mozilla/5.0"
+http 2025-08-26T09:24:00.123456Z app/my-lb 203.0.113.200:54321 10.0.0.1:80 0.000 0.001 0.000 200 200 0 57 "GET http://example.com/search?q=union%20select%201 HTTP/1.1" "Mozilla/5.0" - - - "-" "-" "-" "-"
+{"remote_addr": "203.0.113.50", "time_local": "26/Aug/2025:09:25:00 +0000", "request": "GET /?q=abc HTTP/1.1", "status": 200, "http_user_agent": "Mozilla/5.0"}
+{"start_time": "2025-08-26T09:25:30Z", "method": "GET", "path": "/api?name=admin or 1=1", "response_code": 200, "user_agent": "Mozilla/5.0", "client_ip": "198.51.100.88"}
+{"ClientAddr": "192.0.2.77:54321", "RequestMethod": "GET", "RequestPath": "/download/report.zip", "DownstreamStatus": 200, "UserAgent": "curl/8.0.1"}
+{"ts": "2025-08-26T09:26:00Z", "request": {"remote_ip": "203.0.113.99", "method": "GET", "uri": "/?name=foo"}, "status": 200, "headers": {"User-Agent": ["Mozilla/5.0"]}}
