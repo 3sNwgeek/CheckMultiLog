@@ -1,11 +1,5 @@
 # CheckMultiLog
-多种web日志分析，支持IIS日志、Apache日志、 Nginx 日志、 Tomcat日志 、Jetty日志、通用json（常见字段）安全分析。
-
-Web日志分析演示
-![食用实例](/demo.gif)
-
-Windows日志分析演示
-![食用实例](/demo2.gif)
+多种Windows日志分析、web日志分析，支持IIS日志、Apache日志、 Nginx 日志、 Tomcat日志 、Jetty日志、通用json（常见字段）安全分析。
 
 ## 一、支持的日志格式
 
@@ -22,6 +16,13 @@ Windows日志分析演示
 - 应用程序日志
 - 系统日志
 - SYSMON日志
+
+Web日志分析演示
+![食用实例](/demo.gif)
+
+Windows日志分析演示
+![食用实例](/demo2.gif)
+
 
 > **说明**：免费版仅开放 **IIS W3C** 与 **NCSA(IIS)**；授权版解锁全部格式。
 
