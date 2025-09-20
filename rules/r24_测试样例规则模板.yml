@@ -1,0 +1,47 @@
+# 规则ID：必须唯一，用于标识规则，请从R24后开始
+id: "R24"
+
+# 规则名称：描述规则的主要功能和检测目标
+name: "测试外部规则 - 模板"
+
+# 规则严重程度：info(低)、medium(中)、high(高)、critical(严重)
+severity: "info"
+
+# MITRE ATT&CK 矩阵关联：列出相关的攻击战术和技术
+mitre:
+  - "T1078 错误账号"
+
+# 适用的日志类型：指定规则适用于哪些类型的Windows日志
+log_types: ["Security"]
+
+# 匹配条件：定义触发规则的事件条件
+match:
+  # 事件ID：4624表示登录成功事件
+  event_id: 4624
+  # 登录类型：3表示网络登录（例如远程桌面、文件共享访问等）
+  logon_type: 3
+
+# 聚合条件（可选）：定义事件聚合的窗口和分组方式
+# aggregate:
+#   window_sec: 300          # 聚合窗口（秒）
+#   by: ["src_ip", "target_user"]  # 按哪些字段分组
+#   count_gte: 5            # 事件次数阈值
+
+# 白名单条件（可选）：定义排除的情况
+whitelist: 
+  # 排除特定用户的登录事件
+  # - {"target_user": {"regex": "^(?:ANONYMOUS LOGON|.*\\$|Guest)$"}}
+  # 排除本地IP地址的登录事件
+  # - {"src_ip": {"regex": "^(?:127\\.0\\.0\\.1|::1)$"}}
+
+# 顺序条件（可选）：定义事件的发生顺序
+# sequence:
+#   - {"event_id": 4625}  # 首先是登录失败事件
+#   - {"event_id": 4624}  # 然后是登录成功事件
+#   sequence_window_sec: 600  # 事件顺序的时间窗口（秒）
+
+# 额外SQL条件（可选）：使用SQL表达式进行更复杂的过滤
+# extra_sql: "SUBSTR(ts, 12, 2) >= '20'"  # 只匹配晚上8点后发生的事件
+
+# 冷却时间（秒）：同一类型告警的最小间隔时间，避免告警风暴
+cooldown_sec: 60

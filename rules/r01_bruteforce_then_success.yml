@@ -1,0 +1,20 @@
+id: R01
+name: 暴力破解后成功登录
+severity: high
+mitre: [TA0006, T1110]
+log_types: [Security]
+match:
+  event_id: { in: [4624, 4625] }
+  logon_type: { in: [3, 10] }     # 网络/远程桌面
+aggregate:
+  window_sec: 300
+  by: [src_ip, target_user]
+  count_gte: 8
+whitelist:
+  - { target_user: { regex: "^(?:ANONYMOUS LOGON|.*\\$|Guest)$" } }
+  - { src_ip: { regex: "^(?:127\\.0\\.0\\.1|::1)$" } }
+sequence:
+  - { event_id: 4625 }
+  - { event_id: 4624 }
+sequence_window_sec: 600
+cooldown_sec: 300
